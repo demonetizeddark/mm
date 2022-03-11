@@ -634,7 +634,7 @@ API.FrameVideoControls = function (video) {
     video.wrapper.addEventListener("seeking", function () {
         if (!API.E2020.reviewMode && !API.Frame.isComplete()) {
             if (video.video.currentTime > video.maxTimeViewed) {
-                return    										//updates the video wrapper
+                return;    										//updates the video wrapper
             }                                                   //Both need to be updated in the case where built-in
         }                                                       //browser controls directly alter the video element 
 		// Not anymore, cunts. - META
