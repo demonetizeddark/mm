@@ -510,9 +510,9 @@ API.FrameVideoControls = function (video) {
     $(newNode).css("position", "absolute");
     $(newNode).css("display", "block");
 
-    if (API.E2020.reviewMode || API.Frame.isComplete()) {
+    /* if (API.E2020.reviewMode || API.Frame.isComplete()) {
         $("#" + FrameVideoControls.elementIDs.progressLimit).hide();
-    }
+    }*/
 
     this.openSettingsDialog = function()
     {
@@ -631,14 +631,14 @@ API.FrameVideoControls = function (video) {
         element.innerHTML = "<a href='javascript:void(0);'>Play</a>"
     });
 
-    video.wrapper.addEventListener("seeking", function () {
+   /* video.wrapper.addEventListener("seeking", function () {
         if (!API.E2020.reviewMode && !API.Frame.isComplete()) {
             if (video.video.currentTime > video.maxTimeViewed) {
                 return;    										//updates the video wrapper
             }                                                   //Both need to be updated in the case where built-in
-        }                                                       //browser controls directly alter the video element 
+        }                                                     //browser controls directly alter the video element 
 		// Not anymore, cunts. - META
-    });
+    });*/
 
     video.wrapper.addEventListener('PlayheadUpdate', function (seconds, duration) {
         if (video.fileNotFound) { return; }
